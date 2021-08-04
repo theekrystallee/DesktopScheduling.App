@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="463.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.AddCustomersScreenController">
+    <children>
+        <Label layoutX="208.0" layoutY="39.0" text="Add New Customer">
+            <font>
+                <Font name="Arial Bold" size="20.0" />
+            </font>
+        </Label>
+        <AnchorPane layoutX="41.0" layoutY="77.0" prefHeight="305.0" prefWidth="518.0">
+            <children>
+                <Label layoutX="165.0" layoutY="17.0" text="Name">
+                    <font>
+                        <Font name="Arial" size="18.0" />
+                    </font>
+                </Label>
+                <Label layoutX="163.0" layoutY="57.0" text="Address">
+                    <font>
+                        <Font name="Arial" size="18.0" />
+                    </font>
+                </Label>
+                <Label layoutX="164.0" layoutY="93.0" text="Postal">
+                    <font>
+                        <Font name="Arial" size="18.0" />
+                    </font>
+                </Label>
+                <Label layoutX="163.0" layoutY="132.0" text="Phone">
+                    <font>
+                        <Font name="Arial" size="18.0" />
+                    </font>
+                </Label>
+                <VBox alignment="CENTER_LEFT" layoutX="237.0" layoutY="17.0" prefHeight="138.0" prefWidth="148.0" spacing="10.0" AnchorPane.bottomAnchor="150.0">
+                    <children>
+                        <TextField fx:id="nameTextField" promptText="Willy Wonka">
+                            <font>
+                                <Font name="Arial" size="15.0" />
+                            </font>
+                        </TextField>
+                        <TextField fx:id="addressTextField" promptText="123 West 99th St">
+                            <font>
+                                <Font name="Arial" size="15.0" />
+                            </font>
+                        </TextField>
+                        <TextField fx:id="postalTextField" promptText="11375">
+                            <font>
+                                <Font name="Arial" size="15.0" />
+                            </font>
+                        </TextField>
+                        <TextField fx:id="phoneTextField" promptText="9992225555">
+                            <font>
+                                <Font name="Arial" size="15.0" />
+                            </font>
+                        </TextField>
+                    </children>
+                    <opaqueInsets>
+                        <Insets />
+                    </opaqueInsets>
+                </VBox>
+                <Label layoutX="123.0" layoutY="196.0" text="Country">
+                    <font>
+                        <Font name="Arial" size="18.0" />
+                    </font>
+                </Label>
+                <Label layoutX="322.0" layoutY="196.0" text="Division">
+                    <font>
+                        <Font name="Arial" size="18.0" />
+                    </font>
+                </Label>
+                <ComboBox fx:id="divisionComboBox" layoutX="279.0" layoutY="227.0" prefWidth="150.0" />
+                <ComboBox fx:id="countryComboBox" layoutX="80.0" layoutY="227.0" onAction="#countryComboBoxValueChange" prefWidth="150.0" />
+            </children>
+        </AnchorPane>
+        <Button layoutX="423.0" layoutY="382.0" mnemonicParsing="false" onMouseClicked="#saveNewCustomerClicked" prefHeight="27.0" prefWidth="57.0" text="Save" />
+        <Button layoutX="492.0" layoutY="382.0" mnemonicParsing="false" onMouseClicked="#cancelSaveButtonClicked" text="Cancel" />
+    </children>
+</AnchorPane>

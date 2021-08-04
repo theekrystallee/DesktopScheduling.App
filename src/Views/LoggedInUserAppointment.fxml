@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="400.0" prefWidth="952.0" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.LoggedInUserAppointmentController">
+    <children>
+        <Label layoutX="151.0" layoutY="14.0" text="User Id:" />
+        <Label fx:id="userIdLabel" layoutX="204.0" layoutY="14.0" text="User Id" />
+        <TableView fx:id="loggedInUserAppointmentsTable" layoutX="15.0" layoutY="38.0" prefHeight="325.0" prefWidth="922.0">
+            <columns>
+                <TableColumn fx:id="loggedInUserIdCol" prefWidth="44.0" text="ID" />
+                <TableColumn fx:id="loggedInUserTitleCol" prefWidth="101.0" text="Title" />
+                <TableColumn fx:id="loggedInUserDescriptionCol" prefWidth="178.0" text="Description" />
+                <!--            <TableColumn fx:id="loggedInUserStartingInCol" prefWidth="101.0" text="Starting In (mins)" />-->
+                <TableColumn fx:id="loggedInUserCustomerCol" prefWidth="116.0" text="Customer" />
+                <TableColumn fx:id="loggedInUserContactCol" prefWidth="113.0" text="Contact" />
+                <TableColumn fx:id="loggedInUserStartCol" prefWidth="140.0" text="Start Time" />
+                <TableColumn fx:id="loggedInUserEndCol" prefWidth="128.0" text="End Time" />
+            </columns>
+        </TableView>
+    </children>
+</AnchorPane>

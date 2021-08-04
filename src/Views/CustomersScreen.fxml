@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="600.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.CustomersScreenController">
+    <children>
+        <TextField fx:id="searchCustomerTextField" layoutX="646.0" layoutY="95.0" onAction="#searchCustomer" prefHeight="27.0" prefWidth="141.0" promptText="Customer Name or ID" />
+        <Button layoutX="801.0" layoutY="95.0" mnemonicParsing="false" onAction="#searchCustomer" text="Search" />
+        <TableView fx:id="customersTable" layoutX="98.0" layoutY="143.0" prefHeight="315.0" prefWidth="689.0">
+
+            <placeholder>
+                <VBox alignment="CENTER">
+                    <Text>Click on the search bar while empty to show full list of Customers.</Text>
+                    <Text>Or search Customers using their Name or Id.</Text>
+                </VBox>
+            </placeholder>
+            <columns>
+                <TableColumn fx:id="customersColumnId" prefWidth="75.0" text="ID" />
+                <TableColumn fx:id="customersColumnName" prefWidth="139.0" text="Name" />
+                <TableColumn fx:id="customersColumnAddress" prefWidth="115.0" text="Address" />
+                <TableColumn fx:id="customersColumnPostal" prefWidth="90.0" text="Postal" />
+                <TableColumn fx:id="customersColumnPhone" prefWidth="104.0" text="Phone" />
+                <TableColumn fx:id="customersColumnFirstLevelDivision" prefWidth="117.0" text="First-Level Division" />
+            </columns>
+        </TableView>
+        <Label layoutX="403.0" layoutY="47.0" text="Customers">
+            <font>
+                <Font name="Arial Bold" size="20.0" />
+            </font>
+        </Label>
+        <Button layoutX="799.0" layoutY="143.0" mnemonicParsing="false" onMouseClicked="#openAddForm" prefHeight="27.0" prefWidth="59.0" text="Add" />
+        <Button layoutX="799.0" layoutY="195.0" mnemonicParsing="false" onMouseClicked="#updateCustomerButtonClicked" text="Update" />
+        <Button layoutX="800.0" layoutY="245.0" mnemonicParsing="false" onMouseClicked="#deleteSelectedCustomer" prefHeight="27.0" prefWidth="59.0" text="Delete" />
+        <HBox layoutY="-3.0" prefHeight="27.0" prefWidth="134.0">
+            <children>
+                <Button mnemonicParsing="false" onMouseClicked="#navigateToMainScreen" prefHeight="27.0" prefWidth="67.0" style="-fx-background-color: white; -fx-border-color: black;" text="Home">
+                    <HBox.margin>
+                        <Insets right="10.0" />
+                    </HBox.margin>
+                </Button>
+                <Button mnemonicParsing="false" onAction="#handleExit" prefHeight="27.0" prefWidth="64.0" style="-fx-background-color: white; -fx-border-color: black;" text="Exit" />
+            </children>
+        </HBox>
+    </children>
+</AnchorPane>

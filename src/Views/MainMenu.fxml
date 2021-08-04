@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="403.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.MainMenuController">
+    <children>
+        <TilePane alignment="CENTER" hgap="20.0" layoutX="47.0" layoutY="128.0" prefHeight="147.0" prefWidth="506.0">
+            <children>
+                <Button mnemonicParsing="false" onMouseClicked="#navigateToCustomers" prefHeight="73.0" prefWidth="107.0" text="Customers" />
+                <Button layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onMouseClicked="#navigateToAppointments" prefHeight="73.0" prefWidth="107.0" text="Appointments" />
+                <Button layoutX="117.0" layoutY="10.0" mnemonicParsing="false" onMouseClicked="#navigateToReports" prefHeight="73.0" prefWidth="107.0" text="Reports" />
+            </children>
+        </TilePane>
+        <HBox layoutY="-3.0" prefHeight="27.0" prefWidth="134.0">
+            <children>
+                <Button mnemonicParsing="false" onAction="#navigateToMainScreen" prefHeight="27.0" prefWidth="67.0" style="-fx-background-color: white; -fx-border-color: black;" text="Home">
+                    <HBox.margin>
+                        <Insets right="10.0" />
+                    </HBox.margin>
+                </Button>
+                <Button mnemonicParsing="false" onAction="#handleExit" prefHeight="27.0" prefWidth="64.0" style="-fx-background-color: white; -fx-border-color: black;" text="Exit" />
+            </children>
+        </HBox>
+      <Label layoutX="211.0" layoutY="99.0" prefHeight="29.0" prefWidth="178.0" text="Welcome Taxpayer">
+         <font>
+            <Font name="Arial Bold" size="19.0" />
+         </font>
+      </Label>
+    </children>
+</AnchorPane>

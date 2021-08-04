@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="400.0" prefWidth="854.0" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.ScheduleContactsController">
+    <children>
+        <Label layoutX="321.0" layoutY="14.0" text="Schedule for Contacts">
+            <font>
+                <Font name="Arial Bold" size="20.0" />
+            </font>
+        </Label>
+        <TableView fx:id="contactsScheduleTable" layoutX="18.0" layoutY="100.0" prefHeight="255.0" prefWidth="818.0">
+            <columns>
+                <TableColumn fx:id="aptIdCol" prefWidth="52.0" text="Appt Id" />
+                <TableColumn fx:id="aptTitleCol" prefWidth="107.0" text="Title" />
+                <TableColumn fx:id="aptDescriptionCol" prefWidth="185.0" text="Description" />
+                <TableColumn fx:id="aptTypeCol" prefWidth="152.0" text="Type" />
+                <TableColumn fx:id="aptStartCol" prefWidth="130.0" text="Start" />
+                <TableColumn fx:id="aptEndCol" prefWidth="110.0" text="End" />
+                <TableColumn fx:id="aptCustomerIdCol" prefWidth="81.0" text="Customer ID" />
+            </columns>
+        </TableView>
+        <ComboBox fx:id="contactComboBox" layoutX="686.0" layoutY="35.0" onAction="#contactComboBoxChangeAction" prefWidth="150.0" />
+    </children>
+</AnchorPane>

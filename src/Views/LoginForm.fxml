@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.LoginFormController">
+    <children>
+        <VBox alignment="TOP_CENTER" layoutX="232.0" layoutY="124.0" prefHeight="200.0" prefWidth="139.0">
+            <children>
+                <Label fx:id="user" alignment="TOP_CENTER" text="Username">
+                    <font>
+                        <Font size="16.0" />
+                    </font>
+                    <VBox.margin>
+                        <Insets bottom="10.0" />
+                    </VBox.margin>
+                </Label>
+                <TextField fx:id="usernameText" prefWidth="139.0">
+                    <VBox.margin>
+                        <Insets bottom="20.0" />
+                    </VBox.margin>
+                </TextField>
+                <Label fx:id="password" alignment="TOP_CENTER" layoutX="52.0" layoutY="10.0" text="Password">
+                    <font>
+                        <Font size="16.0" />
+                    </font>
+                    <VBox.margin>
+                        <Insets bottom="10.0" />
+                    </VBox.margin>
+                </Label>
+                <PasswordField fx:id="passwordText">
+                    <VBox.margin>
+                        <Insets bottom="20.0" />
+                    </VBox.margin>
+                </PasswordField>
+                <Button fx:id="loginButton" mnemonicParsing="false" onMouseClicked="#loginClicked" text="Login" />
+            </children>
+        </VBox>
+        <Button fx:id="exitButton" layoutX="548.0" layoutY="359.0" mnemonicParsing="false" onAction="#exitApplication" text="Exit" />
+        <Label alignment="TOP_CENTER" layoutX="14.0" layoutY="14.0" prefWidth="66.0" text="Location: ">
+            <font>
+                <Font name="Arial Bold" size="13.0" />
+            </font>
+        </Label>
+        <Label fx:id="loginZoneLabel" alignment="TOP_CENTER" layoutX="80.0" layoutY="14.0" prefHeight="16.0" prefWidth="122.0" />
+      <Label fx:id="loginZoneLabel1" alignment="TOP_CENTER" layoutX="132.0" layoutY="59.0" prefHeight="23.0" prefWidth="340.0" text="Silly Goofy Scheduling Application">
+         <font>
+            <Font name="Arial Bold" size="20.0" />
+         </font>
+      </Label>
+    </children>
+</AnchorPane>

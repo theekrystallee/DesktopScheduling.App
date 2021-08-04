@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+
+<AnchorPane prefHeight="597.0" prefWidth="1182.0" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.AppointmentsScreenController">
+    <children>
+        <HBox prefHeight="29.0" prefWidth="111.0">
+            <children>
+                <Button mnemonicParsing="false" onMouseClicked="#navigateToMainScreen" style="-fx-background-color: white; -fx-border-color: black;" text="Home">
+                    <HBox.margin>
+                        <Insets right="10.0" />
+                    </HBox.margin>
+                </Button>
+                <Button mnemonicParsing="false" onAction="#handleExit" prefHeight="27.0" prefWidth="47.0" style="-fx-background-color: white; -fx-border-color: black;" text="Exit" />
+            </children>
+        </HBox>
+        <TabPane layoutX="31.0" layoutY="42.0" prefHeight="503.0" prefWidth="1098.0" tabClosingPolicy="UNAVAILABLE">
+            <tabs>
+                <Tab fx:id="tab1" onSelectionChanged="#tab1selected" text="All Appointments">
+                    <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="360.0" prefWidth="673.0">
+                            <children>
+                                <TableView fx:id="fullAppointmentTable" layoutY="1.0" prefHeight="414.0" prefWidth="1098.0">
+                                    <columns>
+                                        <TableColumn fx:id="appIdCol" prefWidth="38.0" text="ID" />
+                                        <TableColumn fx:id="appTitleCol" prefWidth="82.0" text="Title" />
+                                        <TableColumn fx:id="appDescriptionCol" prefWidth="169.0" text="Description" />
+                                        <TableColumn fx:id="appLocationCol" prefWidth="87.0" text="Location" />
+                                        <TableColumn fx:id="appContactCol" prefWidth="95.0" text="Contact" />
+                                        <TableColumn fx:id="appTypeCol" prefWidth="82.0" text="Type" />
+                                        <TableColumn fx:id="appStartCol" prefWidth="132.0" text="Start" />
+                                        <TableColumn fx:id="appEndCol" prefWidth="142.0" text="End" />
+                                        <TableColumn fx:id="appCustomerCol" prefWidth="118.0" text="Customer" />
+                                        <TableColumn fx:id="appCustomerIdCol" prefWidth="76.0" text="Cus ID" />
+                                        <TableColumn fx:id="appUserCol" prefWidth="91.0" text="User" />
+                                    </columns>
+                                </TableView>
+                                <Button layoutX="354.0" layoutY="429.0" mnemonicParsing="false" onMouseClicked="#openAddAppointmentForm" prefWidth="60.0" text="Add" />
+                                <Button layoutX="447.0" layoutY="429.0" mnemonicParsing="false" onMouseClicked="#openUpdateAppointmentForm" text="Update" />
+                                <Button layoutX="533.0" layoutY="429.0" mnemonicParsing="false" onMouseClicked="#deleteAppointment" text="Delete" />
+                            </children></AnchorPane>
+                    </content>
+                </Tab>
+                <Tab fx:id="tab2" onSelectionChanged="#tab2selected" text="Monthly Appointments">
+                    <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="470.0" prefWidth="1126.0">
+                            <children>
+                                <TableView fx:id="monthlyAppointmentTable" prefHeight="401.0" prefWidth="1097.0">
+                                    <columns>
+                                        <TableColumn fx:id="monthlyAppIdCol" prefWidth="38.0" text="ID" />
+                                        <TableColumn fx:id="monthlyAppTitleCol" prefWidth="82.0" text="Title" />
+                                        <TableColumn fx:id="monthlyAppDescriptionCol" prefWidth="169.0" text="Description" />
+                                        <TableColumn fx:id="monthlyAppLocationCol" prefWidth="87.0" text="Location" />
+                                        <TableColumn fx:id="monthlyAppContactCol" prefWidth="95.0" text="Contact" />
+                                        <TableColumn fx:id="monthlyAppTypeCol" prefWidth="82.0" text="Type" />
+                                        <TableColumn fx:id="monthlyAppStartCol" prefWidth="132.0" text="Start" />
+                                        <TableColumn fx:id="monthlyAppEndCol" prefWidth="142.0" text="End" />
+                                        <TableColumn fx:id="monthlyAppCustomerCol" prefWidth="111.0" text="Customer" />
+                                        <TableColumn fx:id="monthlyAppCustomerIdCol" minWidth="0.0" prefWidth="66.0" text="Cust ID" />
+                                        <TableColumn fx:id="monthlyAppUserCol" prefWidth="91.0" text="User" />
+                                    </columns>
+                                </TableView>
+                            </children></AnchorPane>
+                    </content>
+                </Tab>
+                <Tab fx:id="tab3" onSelectionChanged="#tab3selected" text="Weekly Appointments">
+                    <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                            <children>
+                                <TableView fx:id="weeklyAppointmentTable" prefHeight="401.0" prefWidth="1098.0">
+                                    <columns>
+                                        <TableColumn fx:id="weeklyAppIdCol" prefWidth="38.0" text="ID" />
+                                        <TableColumn fx:id="weeklyAppTitleCol" prefWidth="82.0" text="Title" />
+                                        <TableColumn fx:id="weeklyAppDescriptionCol" prefWidth="169.0" text="Description" />
+                                        <TableColumn fx:id="weeklyAppLocationCol" prefWidth="87.0" text="Location" />
+                                        <TableColumn fx:id="weeklyAppContactCol" prefWidth="95.0" text="Contact" />
+                                        <TableColumn fx:id="weeklyAppTypeCol" prefWidth="82.0" text="Type" />
+                                        <TableColumn fx:id="weeklyAppStartCol" prefWidth="132.0" text="Start" />
+                                        <TableColumn fx:id="weeklyAppEndCol" prefWidth="142.0" text="End" />
+                                        <TableColumn fx:id="weeklyAppCustomerCol" prefWidth="127.0" text="Customer" />
+                                        <TableColumn fx:id="weeklyAppCustomerIdCol" prefWidth="72.0" text="Cust ID" />
+                                        <TableColumn fx:id="weeklyAppUserCol" prefWidth="76.0" text="User" />
+                                    </columns>
+                                </TableView>
+                            </children></AnchorPane>
+                    </content>
+                </Tab>
+            </tabs>
+        </TabPane>
+    </children>
+</AnchorPane>
