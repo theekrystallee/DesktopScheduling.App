@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="588.0" prefWidth="632.0" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.AddAppointmentsController">
+    <children>
+        <Label layoutX="209.0" layoutY="30.0" text="Add New Appointment">
+            <font>
+                <Font name="Arial Bold" size="20.0" />
+            </font>
+        </Label>
+        <Button layoutX="413.0" layoutY="546.0" mnemonicParsing="false" onMouseClicked="#saveNewAppointment" prefHeight="27.0" prefWidth="63.0" text="Save" />
+        <Button layoutX="505.0" layoutY="546.0" mnemonicParsing="false" onMouseClicked="#cancelAddAppointment" prefHeight="27.0" prefWidth="63.0" text="Cancel" />
+        <VBox alignment="CENTER_LEFT" layoutX="217.0" layoutY="73.0" prefHeight="429.0" prefWidth="330.0" spacing="10.0">
+            <children>
+                <TextField fx:id="appointmentTitleTextField" promptText="Meeting for new website">
+                    <font>
+                        <Font name="Arial" size="15.0" />
+                    </font>
+                </TextField>
+                <TextArea fx:id="appointmentDescriptionTextArea" prefHeight="64.0" prefWidth="265.0" promptText="Meetup with technical team to discuss new features that needs to be included in the new website." />
+                <TextField fx:id="appointmentLocationTextField" promptText="Room 204 at Corn PlazaRoom 204 at Corn Plaza">
+                    <font>
+                        <Font name="Arial" size="15.0" />
+                    </font>
+                </TextField>
+                <ComboBox fx:id="contactComboBox" prefWidth="150.0" />
+                <HBox alignment="CENTER" prefHeight="41.0" prefWidth="330.0">
+                    <children>
+                        <RadioButton fx:id="phoneMeetingRadioButton" mnemonicParsing="false" text="Phone Meeting">
+                            <padding>
+                                <Insets right="5.0" />
+                            </padding>
+                            <toggleGroup>
+                                <ToggleGroup fx:id="appointTypeToggleGroup" />
+                            </toggleGroup>
+                        </RadioButton>
+                        <RadioButton fx:id="videoConferenceRadioButton" mnemonicParsing="false" text="Video Conference" toggleGroup="$appointTypeToggleGroup">
+                            <padding>
+                                <Insets right="5.0" />
+                            </padding>
+                        </RadioButton>
+                        <RadioButton fx:id="inPersonRadioButton" mnemonicParsing="false" text="In-Person" toggleGroup="$appointTypeToggleGroup" />
+                    </children>
+                    <VBox.margin>
+                        <Insets />
+                    </VBox.margin>
+                    <opaqueInsets>
+                        <Insets />
+                    </opaqueInsets>
+                </HBox>
+                <DatePicker fx:id="appointmentDatePicker" />
+                <ComboBox fx:id="startComboBox" prefHeight="32.0" prefWidth="150.0" />
+                <ComboBox fx:id="endComboBox" prefWidth="150.0" />
+                <ComboBox fx:id="customerComboBox" prefWidth="150.0" />
+                <ComboBox fx:id="userComboBox" prefHeight="29.0" prefWidth="150.0" />
+            </children>
+            <opaqueInsets>
+                <Insets />
+            </opaqueInsets>
+        </VBox>
+        <AnchorPane layoutX="23.0" layoutY="80.0" nodeOrientation="LEFT_TO_RIGHT" prefHeight="429.0" prefWidth="141.0">
+            <children>
+                <Label layoutX="149.0" layoutY="4.0" text="Title">
+                    <font>
+                        <Font name="Helvetica" size="18.0" />
+                    </font>
+                </Label>
+                <Label layoutX="95.0" layoutY="59.0" text="Description">
+                    <font>
+                        <Font name="Helvetica" size="18.0" />
+                    </font>
+                </Label>
+                <Label layoutX="115.0" layoutY="112.0" text="Location">
+                    <font>
+                        <Font name="Helvetica" size="18.0" />
+                    </font>
+                </Label>
+                <Label layoutX="118.0" layoutY="153.0" text="Contact">
+                    <font>
+                        <Font name="Helvetica" size="18.0" />
+                    </font>
+                </Label>
+                <Label layoutX="139.0" layoutY="204.0" text="Type">
+                    <font>
+                        <Font name="Arial" size="18.0" />
+                    </font>
+                </Label>
+                <Label layoutX="140.0" layoutY="282.0" text="Start">
+                    <font>
+                        <Font name="Arial" size="18.0" />
+                    </font>
+                </Label>
+                <Label layoutX="143.0" layoutY="319.0" prefHeight="21.0" prefWidth="33.0" text="End">
+                    <font>
+                        <Font name="Arial" size="18.0" />
+                    </font>
+                </Label>
+                <Label layoutX="101.0" layoutY="351.0" text="Customer">
+                    <font>
+                        <Font name="Arial" size="18.0" />
+                    </font>
+                </Label>
+                <Label layoutX="140.0" layoutY="394.0" text="User">
+                    <font>
+                        <Font name="Arial" size="18.0" />
+                    </font>
+                </Label>
+                <Label layoutX="140.0" layoutY="243.0" text="Date">
+                    <font>
+                        <Font name="Arial" size="18.0" />
+                    </font>
+                </Label>
+            </children>
+        </AnchorPane>
+    </children>
+</AnchorPane>
