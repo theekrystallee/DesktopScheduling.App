@@ -8,7 +8,6 @@ The purpose of this application is to be able to schedule, track, and report on 
 The application also allows users to manage and add customers to the database.
 
 Krystal Lee
-klee296@wgu.edu
 version 2.0
 Aug 3, 2021
 
