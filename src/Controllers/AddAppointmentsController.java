@@ -93,7 +93,6 @@ public class AddAppointmentsController {
         }
     }
 
-
     /**
      * This handles the save button on the AddAppointmentScreen and saves the new input to the database. This screen/form
      * collects the user input values from the save form and saves it into the Appointments class and passes to the
@@ -170,8 +169,6 @@ public class AddAppointmentsController {
         } catch (NullPointerException e) {
             AlertMessageController.errorAddingAppointment();
         }
-
-
     }
 
     /**
@@ -188,7 +185,5 @@ public class AddAppointmentsController {
         stage.setScene(scene);
         stage.show();
     }
-
-
 }
 
