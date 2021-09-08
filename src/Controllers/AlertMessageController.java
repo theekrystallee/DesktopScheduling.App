@@ -47,12 +47,10 @@ public class AlertMessageController {
         if (Locale.getDefault().getLanguage().equals("fr")) {
             noAppointmentAlert.setTitle("pas de rendez-vous à venir");
             noAppointmentAlert.setContentText("Salut " + name + ",\n vous n'avez pas de rendez-vous à venir dans les 15 prochaines minutes.");
-//            noAppointmentAlert.showAndWait();
         }
         if (Locale.getDefault().getLanguage().equals( "en" )) {
             noAppointmentAlert.setTitle("No Upcoming Appointments");
             noAppointmentAlert.setContentText("Hi " + name + ",\n you don't have any upcoming appointments within the next 15 minutes.");
-//            noAppointmentAlert.showAndWait();
         }
         noAppointmentAlert.showAndWait();
     }
@@ -231,7 +229,4 @@ public class AlertMessageController {
         errorAlert.setContentText("Fields cannot be empty");
         errorAlert.showAndWait();
     }
-
-
-
 }
