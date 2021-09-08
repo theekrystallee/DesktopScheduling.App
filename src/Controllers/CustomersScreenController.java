@@ -66,7 +66,6 @@ public class CustomersScreenController {
         stage = (Stage) ((Button) event.getSource()).getScene().getWindow();
         scene = FXMLLoader.load(getClass().getResource("/Views/MainMenu.fxml"));
         stage.setTitle("Main Menu");
-//        stage.setScene(new Scene(scene));
         stage.show();
     }
 
@@ -82,9 +81,7 @@ public class CustomersScreenController {
         customersColumnPhone.setCellValueFactory(new PropertyValueFactory<>("customerPhone"));
         customersColumnFirstLevelDivision.setCellValueFactory(new PropertyValueFactory<>("divisionName"));
         customersTable.getSortOrder().add(customersColumnId);
-
     }
-
 
     /**
      * Method that reloads the customers table whenever required.
@@ -109,13 +106,10 @@ public class CustomersScreenController {
 
         try {
             int searchedCustomerInteger = Integer.parseInt(searchCustomerTextField.getText());
-            //Customers searchedCustomer = DBCustomers.lookupCustomers(searchedCustomerInteger);
             ObservableList<Customers> searchedCustomersList = DBCustomers.lookupCustomers(searchedCustomerInteger);
             if (searchedCustomersList == null) {
                 System.out.println("customer not found alert message"); // FIX ME
             } else {
-//                customersTable.getSelectionModel().select(searchedCustomer);
-//                customersTable.scrollTo(searchedCustomer);
                 customersTable.setItems(searchedCustomersList);
                 customersColumnId.setCellValueFactory(new PropertyValueFactory<>("customerId"));
                 customersColumnName.setCellValueFactory(new PropertyValueFactory<>("customerName"));
@@ -123,7 +117,6 @@ public class CustomersScreenController {
                 customersColumnPostal.setCellValueFactory(new PropertyValueFactory<>("customerPostalCode"));
                 customersColumnPhone.setCellValueFactory(new PropertyValueFactory<>("customerPhone"));
                 customersColumnFirstLevelDivision.setCellValueFactory(new PropertyValueFactory<>("divisionName"));
-
             }
         } catch (NumberFormatException e) {
             String searchedCustomerString = searchCustomerTextField.getText();
@@ -139,7 +132,6 @@ public class CustomersScreenController {
                 customersColumnPhone.setCellValueFactory(new PropertyValueFactory<>("customerPhone"));
                 customersColumnFirstLevelDivision.setCellValueFactory(new PropertyValueFactory<>("divisionName"));
             }
-            //System.out.println("search called");
         }
         searchCustomerTextField.clear();
     }
@@ -156,20 +148,6 @@ public class CustomersScreenController {
         stage.setTitle("Add customer");
         stage.setScene(scene);
         stage.show();
-
-
-        //Using a modal form instead
-//        Parent root = FXMLLoader.load(getClass().getResource("../view/add_customers_screen.fxml"));
-//        Stage stage = new Stage();
-//        stage.initModality(Modality.APPLICATION_MODAL);
-//        stage.setTitle("Add New Customer Form");
-//        stage.setScene(new Scene(root));
-//        stage.show();
-
-//        stage = (Stage) ((Button) event.getSource()).getScene().getWindow();
-//        scene = FXMLLoader.load(getClass().getResource("../view/add_customers_screen.fxml"));
-//        stage.setScene(new Scene(scene));
-//        stage.show();
     }
 
     /**
