@@ -33,9 +33,6 @@ public class LoggedInUserAppointmentController {
     @FXML
     private TableColumn<Appointments, String> loggedInUserDescriptionCol;
 
-//    @FXML
-//    private TableColumn<Appointments, Integer> loggedInUserStartingInCol;
-
     @FXML
     private TableColumn<Appointments, String> loggedInUserCustomerCol;
 
@@ -57,7 +54,6 @@ public class LoggedInUserAppointmentController {
         System.out.println(userIdLabel.getText() + " this was not set");
     }
 
-
     @FXML
     private void showUserAppointmentsOnClick(MouseEvent event, int userId) {
         ObservableList<Appointments> allApptLoggedIn = DBAppointments.getAppointmentsForLoggedInUser(userId);
@@ -65,8 +61,6 @@ public class LoggedInUserAppointmentController {
         loggedInUserIdCol.setCellValueFactory(new PropertyValueFactory<>("appointmentId"));
         loggedInUserTitleCol.setCellValueFactory(new PropertyValueFactory<>("title"));
         loggedInUserDescriptionCol.setCellValueFactory(new PropertyValueFactory<>("description"));
-
-
         loggedInUserCustomerCol.setCellValueFactory(new PropertyValueFactory<>("customerName"));
         loggedInUserContactCol.setCellValueFactory(new PropertyValueFactory<>("contactName"));
         loggedInUserStartCol.setCellValueFactory(new PropertyValueFactory<>("startTime"));
@@ -79,14 +73,11 @@ public class LoggedInUserAppointmentController {
         loggedInUserIdCol.setCellValueFactory(new PropertyValueFactory<>("appointmentId"));
         loggedInUserTitleCol.setCellValueFactory(new PropertyValueFactory<>("title"));
         loggedInUserDescriptionCol.setCellValueFactory(new PropertyValueFactory<>("description"));
-
-
         loggedInUserCustomerCol.setCellValueFactory(new PropertyValueFactory<>("customerName"));
         loggedInUserContactCol.setCellValueFactory(new PropertyValueFactory<>("contactName"));
         loggedInUserStartCol.setCellValueFactory(new PropertyValueFactory<>("startTime"));
         loggedInUserEndCol.setCellValueFactory(new PropertyValueFactory<>("endTime"));
     }
-
 
     @FXML
     public void initialize() {
@@ -95,13 +86,10 @@ public class LoggedInUserAppointmentController {
         loggedInUserIdCol.setCellValueFactory(new PropertyValueFactory<>("appointmentId"));
         loggedInUserTitleCol.setCellValueFactory(new PropertyValueFactory<>("title"));
         loggedInUserDescriptionCol.setCellValueFactory(new PropertyValueFactory<>("description"));
-
-
         loggedInUserCustomerCol.setCellValueFactory(new PropertyValueFactory<>("customerName"));
         loggedInUserContactCol.setCellValueFactory(new PropertyValueFactory<>("contactName"));
         loggedInUserStartCol.setCellValueFactory(new PropertyValueFactory<>("startTime"));
         loggedInUserEndCol.setCellValueFactory(new PropertyValueFactory<>("endTime"));
     }
-
 
 }
