@@ -12,16 +12,10 @@ public class DBConnection {
     private static final String vendorName = ":mysql:";
     private static final String ipAddress = "//wgudb.ucertify.com:3306/";
     private static final String dbName = "WJ05Zvi";
-
-
     private static final String jdbcURL = protocol + vendorName + ipAddress + dbName + "?connectionTimeZone=SERVER";
-
-    //    private static final String MYSQLJDBCDriver = "../../External Libraries/mysql-connector-java-8.0.23/";
     private static final String MYSQLJDBCDriver = "com.mysql.cj.jdbc.Driver";
-
     private static final String username = "U05Zvi";
     private static final String password = "53688651099";
-
     private static Connection conn = null;
 
     /**
@@ -32,12 +26,10 @@ public class DBConnection {
             Class.forName(MYSQLJDBCDriver);
             conn = DriverManager.getConnection(jdbcURL, username, password);
         } catch (ClassNotFoundException e) {
-            //System.out.println(e.getMessage());
             e.printStackTrace();
         }
-        //System.out.println(conn);
     }
-
+    
     /**
      * This void method gets a connection whenever SQL query is made.
      */
