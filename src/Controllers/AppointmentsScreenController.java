@@ -139,21 +139,6 @@ public class AppointmentsScreenController {
     @FXML
     public void initialize() {
 
-
-
-
-//
-//
-//
-//        Parent root = FXMLLoader.load(getClass().getResource( "/Views/AppointmentsScreen.fxml" ));
-//        EventObject event = null;
-//        Stage stage = (Stage) ((Button) event.getSource()).getScene().getWindow();
-//        Scene scene = new Scene(root, 900, 600);
-//        stage.setTitle("Customers");
-//        stage.setScene(scene);
-//        stage.show();
-
-
         fullAppointmentTable.setItems(DBAppointments.getAllAppointments());
         appIdCol.setCellValueFactory(new PropertyValueFactory<>("appointmentId"));
         appTitleCol.setCellValueFactory(new PropertyValueFactory<>("title"));
@@ -167,19 +152,7 @@ public class AppointmentsScreenController {
         appCustomerIdCol.setCellValueFactory(new PropertyValueFactory<>("customerId"));
         appUserCol.setCellValueFactory(new PropertyValueFactory<>("userName"));
         fullAppointmentTable.getSortOrder().add(appIdCol);
-
-
-//        //for monthly appointment table
-
-
-//
-//        //for weekly appointment table
-
-
-
     }
-
-
 
     /**
      * Handles the Home button and sends user to the main screen.
@@ -197,14 +170,7 @@ public class AppointmentsScreenController {
 
     @FXML
     public void tab1selected() {
-//        if (tab1.isSelected()) {
-//            tab1label.setText(String.valueOf(tab1value));
-//            System.out.println(tab1value);
-//            tab1value++;
-//        }
-
     }
-
     @FXML
     public void tab2selected() {
 
@@ -221,8 +187,6 @@ public class AppointmentsScreenController {
         monthlyAppCustomerIdCol.setCellValueFactory(new PropertyValueFactory<>("customerId"));
         monthlyAppUserCol.setCellValueFactory(new PropertyValueFactory<>("userName"));
         monthlyAppointmentTable.getSortOrder().add(monthlyAppStartCol);
-
-//        appIdCol.setCellValueFactory(new PropertyValueFactory<>("appointmentId"));
 
     }
 
@@ -247,9 +211,6 @@ public class AppointmentsScreenController {
     /**
      * Opens a new form to let users create a new appointment.
      */
-    /**
-     * Opens a new form to let users create a new appointment.
-     */
     public void openAddAppointmentForm(MouseEvent event) throws IOException {
         Parent root = FXMLLoader.load(getClass().getResource("/Views/AddAppointmentsScreen.fxml"));
         Stage stage = (Stage) ((Button) event.getSource()).getScene().getWindow();
@@ -271,7 +232,7 @@ public class AppointmentsScreenController {
             } catch (IOException e) {
                 e.printStackTrace();
             }
-
+            
             UpdateAppointmentsController updateAppointmentCont = loader.getController();
 
             Appointments selectedAppointment = fullAppointmentTable.getSelectionModel().getSelectedItem();
