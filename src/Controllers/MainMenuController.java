@@ -32,7 +32,6 @@ public class MainMenuController {
             stage.setScene(scene);
             stage.show();
         } catch (NullPointerException e) {
-//            e.printStackTrace();
             System.out.print(e);
         }
     }
@@ -62,7 +61,6 @@ public class MainMenuController {
         stage.setScene(scene);
         stage.show();
     }
-
 
     /**
      * This void method handles the Reports button and switches to Reports screen.
