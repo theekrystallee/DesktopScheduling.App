@@ -24,8 +24,11 @@ version 2.0
 Aug 3, 2021
 
 IntelliJ IDEA 2019.3.5 Ultimate Edition
+
 JDK: Java SE 11.0.9
+
 JavaFX: JavaFK-SDK-11.0.2
+
 mysql-connector-java-8.0.22
 
 Instructions:
