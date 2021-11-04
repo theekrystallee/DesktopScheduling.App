@@ -10,11 +10,7 @@ The organization outlined specific business requirements that must be met as par
 
 Your company acquires Country and First-Level-Division data from a third party that is updated once per year. These tables are prepopulated with read-only data. Please use the attachment “Locale Codes for Region and Language” to review division data. Your company also supplies a list of contacts, which are prepopulated in the Contacts table; however, administrative functions such as adding users are beyond the scope of the application and done by your company’s IT support staff. Your application should be organized logically using one or more design patterns and generously commented using Javadoc so your code can be read and maintained by other programmers.
 
-## C195 - Software II:
-
-Desktop Scheduling Application
-
-This is a Java application made for C195 Software II course.
+## Desktop Scheduling Application
 
 The purpose of this application is to be able to schedule, track, and report on appointments from a desktop.
 The application also allows users to manage and add customers to the database.
